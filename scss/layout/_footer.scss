@@ -1,0 +1,10 @@
+.l-footer{
+    height: var(--footer-height);
+    text-align: center;
+    color: #fff;
+    background-color:#99826D;
+    &--nav{
+        display: flex;
+        justify-content: center;
+    };
+};

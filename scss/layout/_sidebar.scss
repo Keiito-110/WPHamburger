@@ -1,0 +1,20 @@
+.l-sidebar{
+    width: var(--column-widthr);
+    background-color: #F2EDE9;
+    @media (max-width: ($tab)){
+        display: none;
+    };
+};
+
+.l-sidebar.open-menu{
+    @media (max-width: ($tab)){
+        display:inline-block;
+        width: var(--column-widthr_sp);
+        top: 0;
+        height: 100%;
+        position:fixed;
+        background-color: #F2EDE9;
+        right: 0px;
+        z-index: 20;
+    };
+};

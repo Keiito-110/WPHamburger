@@ -1,0 +1,30 @@
+.c-list--title{
+    margin: 10px 20px 10px;
+    font-size: 0.8rem;
+};
+.c-list--menu{
+    font-size: 0.6rem;
+    line-height: 1.5rem;
+    & a{
+    padding: 5px 30px;
+    };
+};
+
+.c-list--single{
+    background-color: #F5F5F5;
+    height: 200px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: 30px;
+    & h3{
+        margin-left: 30px;
+        font-size: 0.4rem;
+
+    };
+    & li{
+        margin-left: 50px;
+        font-size: 0.4rem;
+    };
+};
+
