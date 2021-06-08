@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-	<meta name="description" content="WordPress theme development static data for beginners">
+	<meta name="description" content="Hamburger menu site by Word Press">
 	<meta name="keywords" content="WordPress, Theme, development">
-	<link href="<?php echo esc_url(get_template_directory_uri());?>">
+    <link rel="shortut icon" href="<?php echo get_template_directory_uri();?>/img/favicon.ico">
     <?php wp_head();?>
 </head>
-
-<body>
 
 <body <?php body_class(); ?>>
 
@@ -31,5 +29,7 @@
                 <?php get_search_form(); ?>
 
             </div>
+
             <h2><a href="#" class="c-button--menu">Menu</a></h2>
+        
         </header>
