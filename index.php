@@ -6,7 +6,7 @@
         <article class="l-main--article">
  
             <li class="l-main--article_takeout c-figure--article_takeout">
-                <h2 class="c-title--article"><a href="#">Take Out</a></h2>
+                <?php wp_nav_menu( array('menu' => 'TOmenu', 'menu_class' => 'c-title--article')) ?>
                 <div class="l-main--article_comment">
                     <dl class="c-title--article_comment">
                         <dt>小見出しが入ります</dt>
@@ -20,7 +20,7 @@
             </li>
     
             <li class="l-main--article_eatin c-figure--article_eatin">
-                <h2 class="c-title--article"><a href="#">Eat In</a></h2> 
+                <?php wp_nav_menu( array('menu' => 'EImenu', 'menu_class' => 'c-title--article')) ?>
                 <div class="l-main--article_comment">
                     <dl class="c-title--article_comment">
                         <dt>小見出しが入ります</dt>

@@ -1,12 +1,15 @@
 .c-list--title{
     margin: 10px 20px 10px;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
 };
 .c-list--menu{
-    font-size: 0.6rem;
+    font-size: 1.0rem;
     line-height: 1.5rem;
     & a{
     padding: 5px 30px;
+    };
+    @media (max-width: ($sp)){
+        font-size: 2vw;
     };
 };
 

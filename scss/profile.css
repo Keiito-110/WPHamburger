@@ -943,16 +943,22 @@ dl {
 
 .c-list--title {
   margin: 10px 20px 10px;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 .c-list--menu {
-  font-size: 0.6rem;
+  font-size: 1.0rem;
   line-height: 1.5rem;
 }
 
 .c-list--menu a {
   padding: 5px 30px;
+}
+
+@media (max-width: 767px) {
+  .c-list--menu {
+    font-size: 2vw;
+  }
 }
 
 .c-list--single {
@@ -1073,7 +1079,7 @@ dl {
 }
 
 .c-title--menu {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   margin: 10px 20px;
 }
@@ -1087,6 +1093,26 @@ dl {
 .c-title--footer {
   padding-top: 15px;
   font-size: 0.8rem;
+}
+
+.c-title--footerl {
+  padding: 0 5px;
+  position: relative;
+}
+
+.c-title--footerl::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background-color: #fff;
+}
+
+.c-title--footerr {
+  padding: 0 5px;
 }
 
 .c-title--copyright {
@@ -1110,12 +1136,12 @@ dl {
 }
 
 .c-title--archive_discription dt {
-  font-size: 1.0rem;
+  font-size: 1.2rem;
   margin: 10px 0;
 }
 
 .c-title--archive_discription dd {
-  font-size: 0.6rem;
+  font-size: 1.0rem;
 }
 
 .c-title--archive_comment {
@@ -1146,7 +1172,7 @@ dl {
 }
 
 .c-title--single_discription p {
-  font-size: 0.6rem;
+  font-size: 1.0rem;
   margin: 30px 0;
 }
 
@@ -1200,7 +1226,7 @@ dl {
 
 @media (max-width: 1078px) {
   .c-button--menu {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -1256,8 +1282,28 @@ dl {
   background-size: cover;
 }
 
-.c-figure--archive {
-  background: url(../img/pict4.png) no-repeat center center;
+.c-figure--takeouttop {
+  background: url(../img/pict2.png) no-repeat center center;
+  background-size: cover;
+}
+
+.c-figure--eatintop {
+  background: url(../img/pict6.png) no-repeat bottom center;
+  background-size: cover;
+}
+
+.c-figure--burgertop {
+  background: url(../img/pict5.png) no-repeat bottom center;
+  background-size: cover;
+}
+
+.c-figure--sidetop {
+  background: url(../img/サラダ.jpeg) no-repeat center center;
+  background-size: cover;
+}
+
+.c-figure--drinktop {
+  background: url(../img/コーヒー.jpeg) no-repeat center center;
   background-size: cover;
 }
 
@@ -1339,9 +1385,9 @@ dl {
   }
 }
 
-.p-pager {
-  height: 30px;
-  margin: 5px;
+.wp-pagenavi {
+  margin: 20px 0;
+  font-size: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1353,82 +1399,49 @@ dl {
           align-items: center;
 }
 
-.p-pager--page {
-  font-size: 0.8rem;
-}
-
-.p-pager--pre span,
-.p-pager--next span {
-  display: inline-block;
-  margin: 5px 10px;
-  font-size: 1.0rem;
-}
-
-.p-pager--pagination {
-  height: 30px;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.p-pager--pagination li {
-  display: inline;
-  margin: 0 2px;
-  padding: 0;
-  display: inline-block;
-  font-size: 0.8rem;
-  background: #fff;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #3C2B1C;
-  text-align: center;
-  position: relative;
-}
-
-.p-pager--pagination li a {
-  vertical-align: middle;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  display: table;
+.wp-pagenavi a {
   color: #707070;
-  text-decoration: none;
 }
 
-.p-pager--pagination li a span {
-  display: table-cell;
-  vertical-align: middle;
+.pages {
+  margin-right: 20px;
 }
 
-.p-pager--pagination li a:hover,
-.p-pager--pagination_active span {
-  color: #fff;
+.pages::before {
+  content: 'Page';
+}
+
+.wp-pagenavi .current,
+.wp-pagenavi a.page {
+  margin: 3px;
+  display: inline-block;
+  border: 1px solid #3C2B1C;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.wp-pagenavi .current {
+  border: none;
   background: #3C2B1C;
+  color: #fff;
 }
 
-@media (max-width: 767px) {
-  .p-pager {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .p-pager p,
-  .p-pager--pagination li {
-    display: none;
-  }
-  .p-pager--pre span::after {
-    content: "　前へ";
-  }
-  .p-pager--next span::before {
-    content: "次へ　";
-  }
-  p.p-pager--pre,
-  p.p-pager--next {
-    display: inline-block;
-  }
+.wp-pagenavi a.page:hover {
+  background: #3C2B1C;
+  color: #fff;
+}
+
+.wp-pagenavi .first,
+.wp-pagenavi .extend {
+  margin-right: 10px;
+}
+
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+  font-size: 2rem;
+  margin: 10px;
 }
 
 .p-table--single {
